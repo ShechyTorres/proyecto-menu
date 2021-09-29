@@ -1,0 +1,44 @@
+// Place all the styles related to the cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.h1-index {
+    text-align: center;
+}
+
+.table-index {
+    border: 1px solid blue;
+    margin: auto;
+}
+
+.table-index thead {
+    background-color: #000000;
+}
+
+.table-index th {
+    color: #ffffff;
+}
+
+.table-index tr td {
+    padding: 5px;
+}
+
+
+/* #titulo-form {
+    padding-top: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #232323;
+    height: 30px;
+}
+
+#table-form {
+    margin: auto;
+}
+
+#table-form tr td {
+    padding: 12px;
+}
+
+#boton-ingresar {
+    text-align: center;
+} */

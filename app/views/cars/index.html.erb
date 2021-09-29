@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Menú</title>
+</head>
+<body>
+	<h1 class="h1-index">Listado de Carros</h1>
+	<table class="table-index">
+		<thead>
+			<tr>
+				<th>ID: </th>
+				<th>Placa: </th>
+				<th>Modelo: </th>
+				<th>Color: </th>
+				<th>Acción: </th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @cars.each do |car| %>
+			<tr>
+				<td><%=@cars.ids%></td>
+				<td><%=@cars%></td>
+				<td></td>
+				<td></td>
+				<td>
+					<%= link_to 'Mostrar'%>
+					<%= link_to 'Editar'%>
+					<%= link_to 'Eliminar'%>
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<br>
+</body>
+</html>

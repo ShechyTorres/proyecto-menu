@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Car</title>
+</head>
+<body>
+	<h1 class="h1-new">Nuevo Carro</h1>
+	<div>
+		<table class="table-new">
+		<%= form_with(model: @car, local: true) do |form| %>
+			<tr>
+				<td><%=form.label :placa %></td>
+				<td><%=form.text_field :placa %></td>
+			</tr>
+			<tr>
+				<td><%=form.label :modelo %></td>
+				<td><%=form.text_field :modelo %></td>
+			</tr>
+			<tr>
+				<td><%=form.label :color %></td>
+				<td><%=form.text_field :color %></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="table-boton"><%=form.submit %></td>
+			</tr>
+		<% end %>
+		</table>
+	</div>
+	<br>
+</body>
+</html>
