@@ -15,20 +15,24 @@
 				<th>Placa: </th>
 				<th>Modelo: </th>
 				<th>Color: </th>
-				<th>Acción: </th>
+				<th colspan="3">Acción: </th>
 			</tr>
 		</thead>
 		<tbody>
 			<% @cars.each do |car| %>
 			<tr>
-				<td><%=@cars.ids%></td>
-				<td><%=@cars%></td>
-				<td></td>
-				<td></td>
+				<td><%= car.id %></td>
+				<td><%= car.placa %></td>
+				<td><%= car.modelo %></td>
+				<td><%= car.color %></td>
 				<td>
-					<%= link_to 'Mostrar'%>
-					<%= link_to 'Editar'%>
-					<%= link_to 'Eliminar'%>
+					<%= link_to 'Mostrar', controller: 'cars', action: 'show', id: car %>
+				</td>
+				<td>
+					<%= link_to 'Editar', controller: 'cars', action: 'edit', id: car %>
+				</td>
+				<td>
+					<%= link_to 'Eliminar', car, method: :delete, data: { confirm: '¿Deseas eliminar este carro?'} %>
 				</td>
 			</tr>
 			<% end %>
