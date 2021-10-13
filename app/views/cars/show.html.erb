@@ -23,10 +23,10 @@
 				<td><%=@car.color%></td>
 			</tr>
 		</table>
-		<div class="btn-group">
-			<button type="button" class="btn-success">
-				<%= link_to 'Ir a lista', cars_path(@car) %>
-			</button>
+		<div class="btn">
+			<ul class="nav navbar-nav">
+				<li><%= link_to 'Ir a lista', cars_path %></li>
+			</ul>
 		</div>
 	</div>
 	<br>
