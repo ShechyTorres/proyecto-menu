@@ -26,16 +26,16 @@
     color: #ffffff;
 }
 
-.footer {
+.navbar-fixed-bottom {
     background-color: #000000;
     text-align: center;
 }
 
-.footer div {
+.navbar-fixed-bottom div {
     padding-top: 10px;
 }
 
-.footer div p {
+.navbar-fixed-bottom div p {
     color: #ffffff;
 }
 
