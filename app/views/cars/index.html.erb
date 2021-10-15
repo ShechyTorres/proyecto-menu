@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Menú</title>
-</head>
-<body>
-	<ul class="nav navbar-right">
-    <li><%= link_to "Nuevo Carro", cars_new_path %></li>
-  </ul>
-	<br>
-	<h1 class="h1-index">Listado de Carros</h1>
-	<table class="table-index">
-		<thead>
-			<tr>
-				<th>ID: </th>
-				<th>Placa: </th>
-				<th>Modelo: </th>
-				<th>Color: </th>
-				<th colspan="3">Acción: </th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @cars.each do |car| %>
-			<tr>
-				<td><%= car.id %></td>
-				<td><%= car.placa %></td>
-				<td><%= car.modelo %></td>
-				<td><%= car.color %></td>
-				<td>
-					<%= link_to 'Mostrar', controller: 'cars', action: 'show', id: car %>
-				</td>
-				<td>
-					<%= link_to 'Editar', controller: 'cars', action: 'edit', id: car %>
-				</td>
-				<td>
-					<%= link_to 'Eliminar', car, method: :delete, data: { confirm: '¿Deseas eliminar este carro?'} %>
-				</td>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
-	<br>
-</body>
-</html>
+<title>Proyecto Menú</title>
+
+<ul class="nav navbar-right">
+	<li><%= link_to "Nuevo Carro", cars_new_path %></li>
+</ul>
+<br>
+<h1 class="h1-index">Listado de Carros</h1>
+<table class="table-index">
+	<thead>
+		<tr>
+			<th>ID: </th>
+			<th>Placa: </th>
+			<th>Modelo: </th>
+			<th>Color: </th>
+			<th colspan="3">Acción: </th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @cars.each do |car| %>
+		<tr>
+			<td><%= car.id %></td>
+			<td><%= car.placa %></td>
+			<td><%= car.modelo %></td>
+			<td><%= car.color %></td>
+			<td class="btn btn-default">
+				<%= link_to 'Mostrar', controller: 'cars', action: 'show', id: car%>
+			</td>
+			<td class="btn btn-default">
+				<%= link_to 'Editar', controller: 'cars', action: 'edit', id: car %>
+			</td>
+			<td class="btn btn-default">
+				<%= link_to 'Eliminar', car, method: :delete, data: { confirm: '¿Deseas eliminar este carro?'} %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
