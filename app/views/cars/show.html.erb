@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Show</title>
-</head>
-<body>
-	<h1 class="h1-id">Carro Registrado N° <%=@car.id%></h1>
-	<div>
-		<table class="table-id">
-			<tr>
-				<td><b>Placa: </b></td>
-				<td><%=@car.placa%></td>
-			</tr>
-			<tr>
-				<td><b>Modelo: </b></td>
-				<td><%=@car.modelo%></td>
-			</tr>
-			<tr>
-				<td><b>Color: </b></td>
-				<td><%=@car.color%></td>
-			</tr>
-		</table>
-		<div class="btn">
-			<ul class="nav navbar-nav">
-				<li><%= link_to 'Ir a lista', cars_path %></li>
-			</ul>
-		</div>
-	</div>
-	<br>
-</body>
-</html>
+<title>Mostrar <%=@car.placa%> </title>
+
+<h1 class="h1-id">Carro Registrado N° <%=@car.id%></h1>
+<div>
+	<table class="table-id">
+		<tr>
+			<td><b>Placa: </b></td>
+			<td><%=@car.placa%></td>
+		</tr>
+		<tr>
+			<td><b>Modelo: </b></td>
+			<td><%=@car.modelo%></td>
+		</tr>
+		<tr>
+			<td><b>Color: </b></td>
+			<td><%=@car.color%></td>
+		</tr>
+		<tr id="borde">
+			<td colspan="2" id="boton">
+					<%= link_to 'Ir a lista', cars_path, class: "btn btn-primary", id: "boton-show" %>
+			</td>
+		</tr>
+	</table>
+</div>

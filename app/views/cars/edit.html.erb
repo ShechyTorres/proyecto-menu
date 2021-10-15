@@ -1,23 +1,27 @@
+<title>Editar <%=@car.placa%> </title>
+
 <h1 class="h1-new">Editar Datos de Carro</h1>
-	<div>
-		<table class="table-new">
-		<%= form_with(model: @car, local: true) do |form| %>
-			<tr>
-				<td><%=form.label :placa %></td>
-				<td><%=form.text_field :placa %></td>
-			</tr>
-			<tr>
-				<td><%=form.label :modelo %></td>
-				<td><%=form.text_field :modelo %></td>
-			</tr>
-			<tr>
-				<td><%=form.label :color %></td>
-				<td><%=form.text_field :color %></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="table-boton"><%= form.submit %></td>
-			</tr>
-		<% end %>
-		</table>
-	</div>
-<br>
+<div>
+	<table class="table-new">
+	<%= form_with(model: @car, local: true) do |form| %>
+		<tr>
+			<td><%=form.label :placa %></td>
+			<td><%=form.text_field :placa %></td>
+		</tr>
+		<tr>
+			<td><%=form.label :modelo %></td>
+			<td><%=form.text_field :modelo %></td>
+		</tr>
+		<tr>
+			<td><%=form.label :color %></td>
+			<td><%=form.text_field :color %></td>
+		</tr>
+		<tr>
+			<td colspan="2" id="boton">
+				<%= link_to 'Cancelar', cars_path, class: "btn btn-danger" %>
+				<%= form.submit class: "btn btn-success" %>
+			</td>
+		</tr>
+	<% end %>
+	</table>
+</div>
