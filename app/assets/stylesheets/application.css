@@ -26,30 +26,31 @@
     color: #ffffff;
 }
 
-.navbar-fixed-bottom {
+footer {
     background-color: #000000;
     text-align: center;
 }
 
-.navbar-fixed-bottom div {
+footer div {
     padding-top: 10px;
 }
 
-.navbar-fixed-bottom div p {
+footer div p {
     color: #ffffff;
+}
+
+.boton-salir:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
     .container-fluid {
         background-color: #0000ff;
     }
-    #bs-example-navbar-collapse-1 ul li a {
-        color: #000000;
-    }
-    .footer {
+    footer {
         background-color: #0000ff;
     }
-    .footer div p {
+    footer div p {
         color: #000000;
     }
 }
