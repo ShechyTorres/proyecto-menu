@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="fontello.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,44 +12,46 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="http://127.0.0.1:3000">
-            <%= image_tag("carros.png", :alt => "logo-car", :id => "logo-car") %>
-          </a>
-          
-        </div>
+    <main>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="http://127.0.0.1:3000">
+              <%= image_tag("carros.png", :alt => "logo-car", :id => "logo-car") %>
+            </a>
+            
+          </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Misión</a></li>
-            <li><a href="#">Visión</a></li>
-            <li><a href="#">Contáctanos</a></li>
-            <li>
-              <button class="btn btn-danger navbar-btn">
-                <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %>
-              </button>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <footer class="navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Todos los derechos reservados.</p>
-      </div>
-    </footer>
-    
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Misión</a></li>
+              <li><a href="#">Visión</a></li>
+              <li><a href="#">Contáctanos</a></li>
+              <li>
+                <button class="btn btn-danger navbar-btn">
+                  <%= link_to 'SALIR', destroy_user_session_path, method: :delete, class: "boton-salir glyphicon glyphicon-log-out" %>
+                </button>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+      <br>
+      <footer>
+        <div class="container">
+          <p class="text-muted">Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </main>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
